@@ -1,3 +1,78 @@
+Overview
+--------
+
+This project is a React web application that integrates with AdminJS, an open-source admin panel solution, to allow administrators to create customized forms for claiming EU flight delay and cancellation compensation. The application features automatic translation, unique URL generation, form auto-filling, and saving all entries to a CSV file.
+
+Requirements
+------------
+
+*   Node.js
+*   React
+*   Formik
+*   Yup
+*   react-i18next (for translation)
+*   AdminJS
+*   Backend server (e.g., Express.js or similar)
+*   Database (MongoDB) for storing unique form links and admin data
+
+Main Components
+---------------
+
+### 1\. Admin Dashboard (AdminJS)
+
+A secure dashboard built using AdminJS that allows administrators to create new forms and manage existing ones. Features include:
+
+*   Authentication and user management
+*   Creating new forms
+*   Generating unique URLs for each form
+*   Adding pre-filled data to eliminate repetitive entries
+*   Viewing and managing existing forms
+
+### 2\. Custom Form UI
+
+A separate user interface for the form component, built using React, Formik, and Yup, for users to fill out and submit their claims. Features include:
+
+*   Automatic translation using react-i18next
+*   Auto-filling of form fields based on received data (e.g., phone number or email)
+*   Validation of form fields
+*   Submission of form data to the backend server
+
+### 3\. Backend Server
+
+A server built using Express.js (or a similar framework) to handle form submissions, unique URL generation, and interaction with AdminJS. Features include:
+
+*   Integration with AdminJS for authentication and user management
+*   Storing form data in a database
+*   Generating unique URLs for each form
+*   Providing endpoints for the custom form UI to interact with the server
+*   Saving submitted form data to a CSV file
+
+User Flow
+---------
+
+1.  The administrator logs into the AdminJS dashboard.
+2.  The administrator creates a new form using the dashboard.
+3.  A unique URL is generated for the form.
+4.  The administrator adds pre-filled data (e.g., phone number or email) to the form.
+5.  The form is sent to users via a link containing the unique URL.
+6.  Users fill out the form in the custom form UI, which is auto-filled based on the received data.
+7.  Users submit the form.
+8.  Form data is saved to a CSV file on the server.
+
+
+Form libraries to be implemented in the form or equivalent ones
+---------------------------------------------------------------
+
+//https://github.com/nchaulet/node-geocoder
+
+//https://github.com/kenany/icao
+
+//https://www.npmjs.com/package/react-datepicker
+
+//https://github.com/tunyanghevond/react-airlines-list
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
