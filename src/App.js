@@ -1,10 +1,11 @@
 import React from 'react';
-import FlightClaimForm from './FlightClaimForm';
+import FlightClaimForm from './pages/form/FlightClaimForm';
+
 
 function App() {
   return (
     <div>
-      <FlightClaimForm />
+     <FlightClaimForm/>
     </div>
   );
 }
