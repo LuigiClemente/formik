@@ -18,9 +18,9 @@ Requirements
 Main Components
 ---------------
 
-### 1\. Admin Dashboard (AdminJS)
+### 1\. Admin Dashboard (React Admin)
 
-A secure dashboard built using AdminJS that allows administrators to create new forms and manage existing ones. Features include:
+A secure dashboard built using React Admin that allows administrators to create new forms and manage existing ones. Features include:
 
 *   Authentication and user management
 *   Creating new forms
