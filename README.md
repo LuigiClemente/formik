@@ -11,7 +11,7 @@ Requirements
 *   Formik
 *   Yup
 *   react-i18next (for translation)
-*   AdminJS
+*   React Admin
 *   Backend server (e.g., Express.js or similar)
 *   Database (MongoDB) for storing unique form links and admin data
 
