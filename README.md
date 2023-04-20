@@ -1,7 +1,7 @@
 Overview
 --------
 
-This project is a React web application that integrates with AdminJS, an open-source admin panel solution, to allow administrators to create customized forms for claiming EU flight delay and cancellation compensation. The application features automatic translation, unique URL generation, form auto-filling, and saving all entries to a CSV file.
+This project is a React web application that integrates with React Admin, an open-source admin panel solution, to allow administrators to create customized forms for claiming EU flight delay and cancellation compensation. The application features automatic translation, unique URL generation, form auto-filling, and saving all entries to a CSV file.
 
 Requirements
 ------------
