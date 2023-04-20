@@ -8,7 +8,7 @@ import {
     Box
   } from "@mui/material";
   import { useTranslation } from 'react-i18next';
-  import { createTheme, ThemeProvider } from '@mui/material/styles';
+  import { createTheme } from '@mui/material/styles';
   
   const AssistanceDetailsForm = ({ errors, values, handleChange }) => {
     const { t } = useTranslation();

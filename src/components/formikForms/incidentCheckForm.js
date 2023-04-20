@@ -1,6 +1,6 @@
 import { TextField, Grid, Box, Typography, RadioGroup,  FormControl, Radio, FormControlLabel } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 const IncidentCheckForm = ({ errors, values, handleChange }) => {
   const { t } = useTranslation();

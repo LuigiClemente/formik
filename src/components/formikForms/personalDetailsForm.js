@@ -3,7 +3,7 @@ import {
     Grid, Box, Typography
   } from "@mui/material";
   import { useTranslation } from 'react-i18next';
-  import { createTheme, ThemeProvider } from '@mui/material/styles';
+  import { createTheme } from '@mui/material/styles';
 
 const PersonalDetailsForm = ({ errors, values, handleChange }) => {
     const { t } = useTranslation();

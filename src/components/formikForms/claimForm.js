@@ -1,19 +1,12 @@
 import * as React from "react";
-import { TextField, Grid, Box, Typography } from "@mui/material";
+import { Grid, Box, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 const ClaimForm = ({ errors, values, handleChange }) => {
   const { t } = useTranslation();
-
-  const [selectedDate, setSelectedDate] = React.useState(new Date());
-
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
 
   const theme = createTheme({
     // your theme configuration options
