@@ -8,30 +8,38 @@ const AddressForm = ({ errors, values, handleChange }) => {
     // your theme configuration options
   });
   return (
-    <Grid container rowSpacing={3} spacing={2}>
+    <Grid>
       <Box
         sx={{
           width: "100%",
-          maxWidth: 1000,
-          height: 400,
+          // maxWidth: 1000,
+          // height: 400,
           backgroundColor: "#f3f6f9",
           borderColor: "primary.main",
           borderRadius: 2,
-          ml: 2,
-          mr: 2,
+          // ml: 2,
+          // mr: 2,
           mt: 6,
           pr: 5,
           pl: 5,
           pt: 6,
           [theme.breakpoints.up("md")]: {
-            ml: 30,
-            mr: 30,
+            // ml: 30,
+            // mr: 30,
           },
         }}
       >
         <Typography mb={2}>{t("Add Your Address")}</Typography>
-        <Grid container spacing={2}>
-          <Grid item xs={6}>
+        <Box sx={{
+          display: "flex", [theme.breakpoints.down("md")]: {
+            display: "block",
+          },
+        }}>
+          <Box className="col-lg-6" sx={{
+            [theme.breakpoints.up("md")]: {
+              pr: 1,
+            },
+          }}>
             {" "}
             <TextField
               name="addressLine"
@@ -40,8 +48,14 @@ const AddressForm = ({ errors, values, handleChange }) => {
               onChange={handleChange}
               fullWidth
             />
-          </Grid>
-          <Grid item xs={6}>
+          </Box>
+          <Box className="col-lg-6 " sx={{
+            [theme.breakpoints.up("md")]: {
+              pl: 1,
+            }, [theme.breakpoints.down("md")]: {
+              pt: 3,
+            },
+          }}>
             {" "}
             <TextField
               name="addressLine2"
@@ -50,8 +64,18 @@ const AddressForm = ({ errors, values, handleChange }) => {
               onChange={handleChange}
               fullWidth
             />
-          </Grid>
-          <Grid item xs={6}>
+          </Box>
+        </Box>
+        <Box sx={{
+          display: "flex", pt: 3, pb: 2, [theme.breakpoints.down("md")]: {
+            display: "block",
+          },
+        }}>
+          <Box className="col-lg-6 col-sx-12" sx={{
+            [theme.breakpoints.up("md")]: {
+              pr: 1,
+            },
+          }}>
             {" "}
             <TextField
               error={!!errors.city}
@@ -62,8 +86,15 @@ const AddressForm = ({ errors, values, handleChange }) => {
               onChange={handleChange}
               fullWidth
             />
-          </Grid>
-          <Grid item xs={6}>
+          </Box>
+          <Box className="col-lg-6 col-sx-12" sx={{
+            [theme.breakpoints.up("md")]: {
+              pl: 1,
+            }, [theme.breakpoints.down("md")]: {
+              pt: 3,
+
+            },
+          }}>
             {" "}
             <TextField
               name="postalCode"
@@ -74,8 +105,18 @@ const AddressForm = ({ errors, values, handleChange }) => {
               helperText={errors.postalCode}
               fullWidth
             />
-          </Grid>
-          <Grid item xs={6}>
+          </Box>
+        </Box>
+        <Box sx={{
+          display: "flex", pt: 1, pb: 2, [theme.breakpoints.down("md")]: {
+            display: "block",
+          },
+        }}>
+          <Box className="col-lg-6 col-sx-12" sx={{
+            [theme.breakpoints.up("md")]: {
+              pr: 1,
+            },
+          }}>
             {" "}
             <TextField
               name="state"
@@ -86,8 +127,15 @@ const AddressForm = ({ errors, values, handleChange }) => {
               helperText={errors.state}
               fullWidth
             />
-          </Grid>
-          <Grid item xs={6}>
+          </Box>
+          <Box className="col-lg-6 col-sx-12" sx={{
+            [theme.breakpoints.up("md")]: {
+              pl: 1,
+            }, [theme.breakpoints.down("md")]: {
+              pt: 3,
+              pb: 2,
+            },
+          }}>
             {" "}
             <TextField
               name="country"
@@ -98,8 +146,8 @@ const AddressForm = ({ errors, values, handleChange }) => {
               helperText={errors.country}
               fullWidth
             />
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Box>
 
       {/*   <Grid item xs={6} md={6} sm={6} lg={6}>

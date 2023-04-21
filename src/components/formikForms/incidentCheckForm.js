@@ -1,4 +1,4 @@
-import { TextField, Grid, Box, Typography, RadioGroup,  FormControl, Radio, FormControlLabel } from "@mui/material";
+import { TextField, Grid, Box, Typography, RadioGroup, FormControl, Radio, FormControlLabel } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { createTheme } from '@mui/material/styles';
 
@@ -9,24 +9,24 @@ const IncidentCheckForm = ({ errors, values, handleChange }) => {
   });
 
   return (
-    <Grid container rowSpacing={3} spacing={2}>
+    <Grid >
       <Box
         sx={{
           width: "100%",
-          maxWidth: 1000,
-          height: 300,
+          // maxWidth: 1000,
+          // height: 300,
           backgroundColor: "#f3f6f9",
           borderColor: "primary.main",
           borderRadius: 2,
-          ml: 2,
-          mr: 2,
+          // ml: 2,
+          // mr: 2,
           mt: 6,
           pr: 5,
           pl: 5,
           pt: 6,
           [theme.breakpoints.up("md")]: {
-            ml: 30,
-            mr: 30,
+            // ml: 30,
+            // mr: 30,
           },
         }}
       >
@@ -35,7 +35,7 @@ const IncidentCheckForm = ({ errors, values, handleChange }) => {
             "Now onto the flight disruption itself. What actually happened?"
           )}
         </Typography>
-        <Grid container spacing={2}>
+        <Grid >
           <Grid item xs={6}>
             {" "}
             <FormControl>
@@ -50,7 +50,7 @@ const IncidentCheckForm = ({ errors, values, handleChange }) => {
                 <FormControlLabel
                   value="delayed"
                   control={<Radio />}
-                  label=  {t(
+                  label={t(
                     "My flight was delayed"
                   )}
                 />
@@ -69,52 +69,67 @@ const IncidentCheckForm = ({ errors, values, handleChange }) => {
       <Box
         sx={{
           width: "100%",
-          maxWidth: 1000,
-          height: 300,
+          // maxWidth: 1000,
+          // height: 300,
           backgroundColor: "#f3f6f9",
           borderColor: "primary.main",
           borderRadius: 2,
-          ml: 2,
-          mr: 2,
+          // ml: 2,
+          // mr: 2,
           mt: 6,
           pr: 5,
           pl: 5,
           pt: 6,
           [theme.breakpoints.up("md")]: {
-            ml: 30,
-            mr: 30,
+            // ml: 30,
+            // mr: 30,
           },
         }}
       >
-       
-        <Grid container spacing={2}>
-          <Grid item xs={6}>
+
+        <Box sx={{
+          display: "flex", pb: 2, [theme.breakpoints.down("md")]: {
+            display: "block",
+          },
+        }}>
+          <Box className="col-lg-6 col-sx-12" sx={{
+            [theme.breakpoints.up("md")]: {
+              pr: 1,
+            },
+          }}>
             {" "}
             <TextField
-          name="delayLength"
-          label={t('Delay Length')}
-          value={values.delayLength}
-          onChange={handleChange}
-          error={!!errors.delayLength}
-          helperText={errors.delayLength}
-          fullWidth
-        />
-          </Grid>
-          <Grid item xs={6}>
+              name="delayLength"
+              label={t('Delay Length')}
+              value={values.delayLength}
+              onChange={handleChange}
+              error={!!errors.delayLength}
+              helperText={errors.delayLength}
+              fullWidth
+            />
+          </Box>
+          <Box className="col-lg-6 col-sx-12" sx={{
+            [theme.breakpoints.up("md")]: {
+              pl: 1,
+            }, [theme.breakpoints.down("md")]: {
+              pt: 3,
+              pb: 2,
+            },
+          }}>
             {" "}
             <TextField
-          name="reason"
-          label={t('Reason for Delay or Cancellation')}
-          value={values.reason}
-          onChange={handleChange}
-          multiline
-          rows={4}
-          error={!!errors.reason}
-          helperText={errors.reason}
-          fullWidth
-        />
-          </Grid>
-        </Grid>
+              name="reason"
+              label={t('Reason for Delay or Cancellation')}
+              value={values.reason}
+              onChange={handleChange}
+              multiline
+              rows={4}
+              error={!!errors.reason}
+              helperText={errors.reason}
+              fullWidth
+            />
+          </Box>
+        </Box>
       </Box>
     </Grid>
   );
