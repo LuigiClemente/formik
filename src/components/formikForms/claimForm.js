@@ -14,24 +14,24 @@ const ClaimForm = ({ errors, values, handleChange }) => {
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <Grid container rowSpacing={3} spacing={2}>
+      <Grid>
         <Box
           sx={{
             width: "100%",
-            maxWidth: 1000,
-            height: 300,
+            // maxWidth: 1000,
+            // height: 300,
             backgroundColor: "#f3f6f9",
             borderColor: "primary.main",
             borderRadius: 2,
-            ml: 2,
-            mr: 2,
+            // ml: 2,
+            // mr: 2,
             mt: 6,
             pr: 5,
             pl: 5,
             pt: 6,
             [theme.breakpoints.up("md")]: {
-              ml: 30,
-              mr: 30,
+              // ml: 30,
+              // mr: 30,
             },
           }}
         >
@@ -50,24 +50,25 @@ const ClaimForm = ({ errors, values, handleChange }) => {
         <Box
           sx={{
             width: "100%",
-            maxWidth: 1000,
-            height: 200,
+            // maxWidth: 1000,
+            // height: 200,
             backgroundColor: "#f3f6f9",
             borderColor: "primary.main",
             borderRadius: 2,
-            ml: 2,
-            mr: 2,
+            // ml: 2,
+            // mr: 2,
             mt: 6,
             pr: 5,
             pl: 5,
             pt: 6,
             [theme.breakpoints.up("md")]: {
-              ml: 30,
-              mr: 30,
+              // ml: 30,
+              // mr: 30,
+
             },
           }}
         >
-    
+
           <Grid container spacing={2}>
             <Grid item xs={12}>
               {" "}
@@ -82,24 +83,24 @@ const ClaimForm = ({ errors, values, handleChange }) => {
         <Box
           sx={{
             width: "100%",
-            maxWidth: 1000,
-            height: 100,
+            // maxWidth: 1000,
+            // height: 100,
             backgroundColor: "#f3f6f9",
             borderColor: "primary.main",
             borderRadius: 2,
-            ml: 2,
-            mr: 2,
+            // ml: 2,
+            // mr: 2,
             mt: 6,
             pr: 5,
             pl: 5,
-            pt: 6,
+            pt: 3,
             [theme.breakpoints.up("md")]: {
-              ml: 30,
-              mr: 30,
+              // ml: 30,
+              // mr: 30,
             },
           }}
         >
-    
+
           <Grid container spacing={2}>
             <Grid item xs={12}>
               {" "}

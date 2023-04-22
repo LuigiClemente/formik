@@ -8,24 +8,24 @@ const AirlineDetailsForm = ({ errors, values, handleChange }) => {
     // your theme configuration options
   });
   return (
-    <Grid container rowSpacing={3} spacing={2}>
+    <Grid >
       <Box
         sx={{
-          width: "100%",
-          maxWidth: 1000,
-          height: 300,
+          // width: "100%",
+          // maxWidth: 1000,
+          // height: 300,
           backgroundColor: "#f3f6f9",
           borderColor: "primary.main",
           borderRadius: 2,
-          ml: 2,
-          mr: 2,
+          // ml: 2,
+          // mr: 2,
           mt: 6,
           pr: 5,
           pl: 5,
           pt: 6,
           [theme.breakpoints.up("md")]: {
-            ml: 30,
-            mr: 30,
+            // ml: 30,
+            // mr: 30,
           },
         }}
       >
@@ -34,8 +34,16 @@ const AirlineDetailsForm = ({ errors, values, handleChange }) => {
             "Hi! Let’s see if the airline owes you compensation. Where were you flying to?"
           )}
         </Typography>
-        <Grid container spacing={2}>
-          <Grid item xs={6}>
+        <Box sx={{
+          display: "flex", [theme.breakpoints.down("md")]: {
+            display: "block",
+          },
+        }}>
+          <Box className="col-lg-6 col-sx-12" sx={{
+            [theme.breakpoints.up("md")]: {
+              pr: 1,
+            },
+          }}>
             {" "}
             <TextField
               fullWidth
@@ -47,8 +55,16 @@ const AirlineDetailsForm = ({ errors, values, handleChange }) => {
               helperText={errors.departureAirport}
               onChange={handleChange}
             />
-          </Grid>
-          <Grid item xs={6}>
+          </Box>
+          <Box className="col-lg-6 col-sx-12" sx={{
+            [theme.breakpoints.up("md")]: {
+              pl: 1,
+              pb: 3,
+            }, [theme.breakpoints.down("md")]: {
+              pt: 3,
+              pb: 2,
+            },
+          }}>
             {" "}
             <TextField
               fullWidth
@@ -60,11 +76,11 @@ const AirlineDetailsForm = ({ errors, values, handleChange }) => {
               helperText={errors.arrivalAirport}
               onChange={handleChange}
             />
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Box>
 
-  { /*   <Grid item xs={6} md={6} sm={6} lg={6}>
+      { /*   <Grid item xs={6} md={6} sm={6} lg={6}>
         <TextField
           fullWidth
           error={!!errors.flightNumber}
